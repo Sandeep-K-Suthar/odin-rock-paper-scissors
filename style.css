@@ -1,39 +1,141 @@
-
-*{
+* {
     box-sizing: border-box;
-    
+
 }
-html{
+
+html {
     font-family: sans-serif;
     text-align: center;
     height: 100vh;
-    background: yellowgreen;
+    background-image: linear-gradient(135deg, #ffd16f 10%, #3676ff 100%);
+    background-repeat: no-repeat;
+    padding-top: 5vh;
+
+
 }
-.welcome, .play, .human, .computer{
-    padding: 1em;
+
+body {
+    user-select: none;
+
+}
+
+body>div {
+    padding-top: 2vh;
+
+}
+
+body>h1 {
+
+    font-size: 2.5em;
+    filter: drop-shadow(5px 15px 9px rgb(128, 126, 0));
+}
+
+
+.welcome,
+.play {
+    padding: 2em;
     margin: 2em;
     border-radius: 4em;
     width: 20em;
     justify-self: center;
+    align-items: center;
     background: rgb(255 255 255 / 30%);
     backdrop-filter: blur(10px);
+    filter: drop-shadow(5px 5px 5px gray);
+    font-size: 1.5em;
+}
+.human,
+.computer {
+    padding-top: 1em;
+    border-radius: 4em;
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    justify-self: center;
+    align-items: center;
+    background: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(5px 5px 5px gray);
+    font-size: 1.5em;
 }
 
-.play{
-    display:none;
+.go {
+    display: grid;
+    place-items: center;
+    gap: 1em;
+
+}
+
+h3 {
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+h3.grow {
+    font-size: 2em;
+}
+
+.play {
+    display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 7em;
+    height: 8em;
+    /* gap: 4em; */
 }
-.result{
+
+.result {
     display: none;
-    gap: 4em;
     justify-content: center;
     align-items: center;
 }
 
-.resultAnnouncement{
+
+.tie {
+    width: 10em;
+
+}
+
+.tie>p {
+    font-size: 1.5em;
+}
+
+.resultAnnouncement {
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-} 
+    gap: 2em;
+}
+
+button {
+    border-radius: 2em;
+    border-style: none;
+    font-size: 1em;
+    padding: 0.2em 0.7em;
+    transition: all 0.5s ease 0.1s;
+    cursor: pointer;
+
+}
+
+button:hover {
+    font-size: 1.2em;
+}
+
+button:active {
+    filter: drop-shadow(5px 5px 5px steelblue);
+    transition: filter 0s;
+}
+
+.choose {
+    /* display: none; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.score-update {
+    font-size: 2em;
+    transition: font-size 0.1s ease 0.1s;
+}
